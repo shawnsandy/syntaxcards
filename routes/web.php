@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('page::index');
+});
+
+
+Route::group(["prefix" => "page"], function(){
+   Pages::routes();
 });
